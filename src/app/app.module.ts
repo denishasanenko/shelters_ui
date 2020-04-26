@@ -6,19 +6,21 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatSliderModule} from '@angular/material';
 import {MainComponent} from './main/main.component';
-import {PetsComponent} from './pets/pets.component';
+import {PetsModule} from './pets/pets.module';
+import {GraphqlModule} from './graphql/graphql.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent,
-    PetsComponent
+    MainComponent
   ],
   imports: [
+    PetsModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatSliderModule
+    MatSliderModule,
+    GraphqlModule
   ],
   providers: [],
   bootstrap: [AppComponent]
