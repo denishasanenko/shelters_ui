@@ -4,18 +4,23 @@
 // This file was automatically generated and should not be edited.
 
 // ====================================================
-// GraphQL query operation: allShelters
+// GraphQL query operation: pets
 // ====================================================
 
-export interface allShelters_allShelters {
+export interface pets_pets_shelter {
   id: string;
   name: string;
-  category: ShelterCategory;
-  created_at: any | null;
 }
 
-export interface allShelters {
-  allShelters: allShelters_allShelters[];
+export interface pets_pets {
+  id: string;
+  name: string;
+  picture: string;
+  shelter: pets_pets_shelter | null;
+}
+
+export interface pets {
+  pets: pets_pets[];
 }
 
 /* tslint:disable */
@@ -24,12 +29,6 @@ export interface allShelters {
 //==============================================================
 // START Enums and Input Objects
 //==============================================================
-
-export enum ShelterCategory {
-  BOTH = "BOTH",
-  CATS = "CATS",
-  DOGS = "DOGS",
-}
 
 //==============================================================
 // END Enums and Input Objects

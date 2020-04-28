@@ -19,7 +19,6 @@ enum CacheControlScope {
   PRIVATE
 }
 
-# Valid timestamp
 scalar DateTime
 
 type Mutation {
@@ -28,6 +27,20 @@ type Mutation {
   signUp(input: SignInput): String!
   postBlogArticle(input: BlogArticleInput!): BlogArticle!
   postShelter(input: PostShelterInput!): Shelter!
+  postPet(input: PostPetInput!): Pet!
+}
+
+type Pet {
+  id: ID!
+  name: String!
+  shelter: Shelter
+  picture: String!
+}
+
+input PostPetInput {
+  name: String!
+  shelter_id: ID!
+  picture: String
 }
 
 input PostShelterInput {
@@ -43,6 +56,7 @@ type Query {
   blogArticles(shelter_id: ID!): [BlogArticle!]!
   totalShelters: Int!
   allShelters: [Shelter!]!
+  pets: [Pet!]!
 }
 
 type Shelter {
@@ -66,7 +80,6 @@ input SignInput {
   password: String!
 }
 
-# The `Upload` scalar type represents a file upload.
 scalar Upload
 
 type User {

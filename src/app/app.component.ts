@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {ApolloBoost, gql} from 'apollo-angular-boost';
+import { gql} from 'apollo-angular-boost';
 import {Observable} from 'rxjs';
-import {allShelters} from './graphql/schema';
+import {pets} from './graphql/schema';
 import { Apollo } from 'apollo-angular-boost';
 import {map} from 'rxjs/operators';
 
@@ -12,21 +12,24 @@ import {map} from 'rxjs/operators';
 })
 export class AppComponent implements OnInit {
   title = 'shelter-ng';
-  shelters: Observable<allShelters>;
+  pets: Observable<pets>;
   petsQuery = gql`
-  query allShelters{
-    allShelters {
+  query pets{
+    pets {
       id
       name
-      category
-      created_at
+      picture
+      shelter {
+        id
+        name
+      }
     }
   }`;
 
   constructor(private apollo: Apollo) {}
 
   ngOnInit() {
-    this.shelters = this.apollo.watchQuery<allShelters>({query: this.petsQuery}).valueChanges.pipe(map(shelter => shelter.data));
+    this.pets = this.apollo.watchQuery<pets>({query: this.petsQuery}).valueChanges.pipe(map(shelter => shelter.data));
   }
 
 }

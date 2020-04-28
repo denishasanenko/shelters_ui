@@ -16,8 +16,9 @@
 
 <div>
   <ul>
-    <li *ngFor="let shelter of (shelters | async)?.allShelters">
-      {{shelter.name}}
+    <li *ngFor="let pet of (pets | async)?.pets">
+      {{pet.name}}
+      <img [src]="pet.picture" />
     </li>
   </ul>
 </div>
