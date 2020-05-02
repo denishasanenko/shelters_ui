@@ -1,5 +1,5 @@
 import {NgModule} from '@angular/core';
-import {PetsComponent} from './pets.component';
+import {PetsComponent} from './pages/pets/pets.component';
 import {PetCardComponent} from './components/pet-card/pet-card.component';
 
 @NgModule({

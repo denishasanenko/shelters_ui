@@ -1,0 +1,18 @@
+Sign in page
+
+<form [formGroup]="form" (ngSubmit)="signIn()">
+  <label>
+    Email:
+    <input type="email" required  autocomplete="email" formControlName="email" placeholder="email" />
+  </label>
+  <label>
+    Password:
+    <input type="password" required autocomplete="password" formControlName="password" placeholder="Password">
+  </label>
+  <label class="errors" *ngIf="form.errors">
+    {{form.errors.email}}
+  </label>
+  <label>
+    <button>Sign In</button>
+  </label>
+</form>

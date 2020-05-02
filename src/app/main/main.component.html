@@ -1,1 +1,10 @@
 Main page
+
+<div>
+  <ul>
+    <li *ngFor="let pet of (pets | async)?.pets">
+      {{pet.name}}
+      <img [src]="pet.picture" />
+    </li>
+  </ul>
+</div>

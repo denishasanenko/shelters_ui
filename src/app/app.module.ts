@@ -8,6 +8,7 @@ import {MatSliderModule} from '@angular/material';
 import {MainComponent} from './main/main.component';
 import {PetsModule} from './pets/pets.module';
 import {GraphqlModule} from './graphql/graphql.module';
+import {SignModule} from './sign/sign.module';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import {GraphqlModule} from './graphql/graphql.module';
   ],
   imports: [
     PetsModule,
+    SignModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,

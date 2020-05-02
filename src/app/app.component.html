@@ -1,7 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>
-    Petly
+    Barklee
   </h1>
 </div>
 
@@ -14,13 +14,10 @@
   </li>
 </ul>
 
-<div>
-  <ul>
-    <li *ngFor="let pet of (pets | async)?.pets">
-      {{pet.name}}
-      <img [src]="pet.picture" />
-    </li>
-  </ul>
-</div>
+<ul>
+  <li>
+    <a routerLink="/sign/in">Sign In</a>
+  </li>
+</ul>
 
 <router-outlet></router-outlet>
