@@ -6,7 +6,8 @@ import {pets} from '../graphql/schema';
 
 @Component({
   selector: 'app-main',
-  templateUrl: 'main.component.html'
+  templateUrl: 'main.component.html',
+  styleUrls: ['main.component.scss']
 })
 export class MainComponent implements OnInit{
 
@@ -17,6 +18,8 @@ export class MainComponent implements OnInit{
         id
         name
         picture
+        gender
+        age
         shelter {
           id
           name

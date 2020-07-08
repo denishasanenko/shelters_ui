@@ -1,4 +1,85 @@
 /* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+* {
+  color: #444444;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+p {
+  margin: 24px 0;
+}
+
+h1 {
+  font-size: 42px;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: normal;
+  line-height: 42px;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: normal;
+}
+
+a {
+  color: #5B8FDB;
+}
+
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  padding: 12px 24px;
+  border-radius: 6px;
+  outline: none;
+  border: none;
+  background: #FFFFFF;
+  color: #5B8FDB;
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: none;
+}
+
+.btn.btn-green {
+  background-color: #7DC855;
+  color: #FFFFFF;
+}
+
+.content {
+  display: flex;
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.gold-sides {
+  .left {
+    width: 390px;
+  }
+
+  .right {
+    box-sizing: content-box;
+    padding-left: 24px;
+    width: 634px;
+  }
+
+  &.reverse {
+    .left {
+      box-sizing: content-box;
+      padding-right: 24px;
+      width: 634px;
+    }
+
+    .right {
+      width: 390px;
+    }
+  }
+}

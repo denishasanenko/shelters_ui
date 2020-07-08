@@ -22,8 +22,12 @@ export class SignInComponent {
 
   public async signIn() {
     try {
-      const response = await this.apollo.mutate({mutation: this.signInMutation, variables: {input: this.form.value}}).toPromise();
-      const token = response.data.signIn;
+      const response = (
+        await this.apollo
+          .mutate({mutation: this.signInMutation, variables: {input: this.form.value}})
+          .toPromise()
+      ).data as signIn;
+      const token = response.signIn;
       console.log(token);
     } catch (error) {
       this.form.setErrors({email: error});

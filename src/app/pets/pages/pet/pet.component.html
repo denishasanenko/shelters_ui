@@ -1,0 +1,12 @@
+<div class="content">
+  <div *ngIf="pet">
+    <h3 class="pet-name">{{pet.name}}</h3>
+
+    <div class="pet-pic">
+      <img [src]="pet.picture" [alt]="pet.name" />
+    </div>
+
+    <span>{{pet.gender}} / {{pet.age}} months</span>
+
+  </div>
+</div>

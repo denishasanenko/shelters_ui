@@ -1,0 +1,28 @@
+a {
+  display: block;
+  width: 180px;
+  height: 264px;
+  text-decoration: none;
+
+  .pet-pic {
+    overflow: hidden;
+    border-radius: 12px;
+    height: 264px;
+    display: flex;
+    justify-content: center;
+
+    img {
+      height: 100%;
+    }
+  }
+
+  span {
+    display: block;
+    margin: 6px 0;
+
+    &.pet-name {
+      font-size: 18px;
+      font-weight: bold;
+    }
+  }
+}

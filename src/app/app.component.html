@@ -1,23 +1,32 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Barklee
-  </h1>
-</div>
-
-<ul>
-  <li>
-    <a routerLink="/">Main</a>
-  </li>
-  <li>
-    <a routerLink="/pets">Pets</a>
-  </li>
-</ul>
-
+<header>
+  <div class="content">
+    <h1>
+      <a routerLink="/">
+        <img id="logo" src="assets/barklee.png" alt="Barklee" />
+      </a>
+    </h1>
+    <ul>
+      <li>
+        <a routerLink="/">Головна</a>
+      </li>
+      <li>
+        <a routerLink="/pets">Тварини</a>
+      </li>
+      <li>
+        <a routerLink="/how">Як допомогти</a>
+      </li>
+      <li>
+        <a routerLink="/faq">Корисна інформація</a>
+      </li>
+    </ul>
+  </div>
+</header>
+<!--
 <ul>
   <li>
     <a routerLink="/sign/in">Sign In</a>
   </li>
 </ul>
-
+-->
 <router-outlet></router-outlet>

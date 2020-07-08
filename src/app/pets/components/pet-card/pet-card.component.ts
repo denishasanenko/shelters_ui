@@ -1,7 +1,12 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
+import {PetGender} from '../../configs/pet-gender.enum';
 
 @Component({
   selector: 'app-pet-card',
-  templateUrl: 'pet-card.component.html'
+  templateUrl: 'pet-card.component.html',
+  styleUrls: ['pet-card.component.scss']
 })
-export class PetCardComponent {}
+export class PetCardComponent {
+  @Input() pet;
+  public petGender = PetGender;
+}

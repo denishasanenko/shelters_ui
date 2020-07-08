@@ -1,3 +1,12 @@
-Pets page
-<app-pet-card></app-pet-card>
+<div class="content">
+  <div class="pets-list right">
+    <h3>Усі тварини</h3>
+    <ul>
+      <li *ngFor="let pet of (pets | async)?.pets">
+        <app-pet-card [pet]="pet"></app-pet-card>
+      </li>
+    </ul>
+  </div>
 
+
+</div>

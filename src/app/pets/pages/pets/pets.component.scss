@@ -1,0 +1,13 @@
+.pets-list {
+  ul {
+    display: flex;
+
+    li {
+      display: block;
+      list-style: none;
+      width: 180px;
+      height: 264px;
+      margin-right: 24px;
+    }
+  }
+}

@@ -1,0 +1,19 @@
+header {
+  height: 84px;
+  width: 100%;
+}
+
+h1 img {
+  height: 56px;
+  margin-top: -12px;
+}
+
+ul {
+  display: flex;
+  margin-left: auto;
+
+  li {
+    margin: 12px;
+    list-style: none;
+  }
+}

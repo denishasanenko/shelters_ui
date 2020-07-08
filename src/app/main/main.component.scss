@@ -1,0 +1,74 @@
+.banner {
+  height: 420px;
+  width: 100%;
+  background: #E7E7E7;
+  border-top: 1px solid #DDD;
+
+  .content {
+    height: 100%;
+  }
+
+  .content > div {
+    width: 564px;
+    padding-top: 72px;
+  }
+
+  img {
+    margin-left: auto;
+    height: 100%;
+  }
+}
+
+.pets {
+  padding-top: 24px;
+  border-top: 1px solid #DDD;
+
+  .content{
+    .info {
+      .btn {
+        margin-bottom: 24px;
+      }
+
+      .statistics {
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        width: 500px;
+
+        li {
+          width: 200px;
+          display: block;
+          border-left: 1px solid gray;
+          padding: 6px 12px;
+          margin-bottom: 24px;
+
+          p {
+            margin: 6px 0;
+          }
+
+          .figure {
+            font-size: 36px;
+            line-height: 42px;
+            font-weight: lighter;
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    .pets-list {
+      ul {
+        padding-top: 54px;
+        display: flex;
+
+        li {
+          display: block;
+          list-style: none;
+          width: 180px;
+          height: 264px;
+          margin-right: 24px;
+        }
+      }
+    }
+  }
+}

@@ -1,1 +1,7 @@
-Pet card
+<a routerLink="/pets/{{pet.name}}">
+  <div class="pet-pic">
+    <img [src]="pet.picture" [alt]="pet.name" />
+  </div>
+  <span class="pet-name">{{pet.name}}</span>
+  <span>{{petGender[pet.gender]}} / {{pet.age}} місяців</span>
+</a>

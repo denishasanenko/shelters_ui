@@ -1,10 +1,44 @@
-Main page
+<section class="banner">
+  <div class="content">
+    <div>
+      <h2>Не обов'язково бути господарем, щоб піклуватися</h2>
+      <p>Допомагати легко. </p>
+      <a routerLink="/faq" class="btn btn-white">Дізнатися більше</a>
+    </div>
+    <img src="assets/banner.png" alt="Adopt me" />
+  </div>
+</section>
 
-<div>
-  <ul>
-    <li *ngFor="let pet of (pets | async)?.pets">
-      {{pet.name}}
-      <img [src]="pet.picture" />
-    </li>
-  </ul>
-</div>
+<section class="pets">
+  <div class="content gold-sides">
+      <div class="info left">
+        <h3>Вони потребують твоєї допомоги</h3>
+        <p>
+          Цей ресурс працює меньше року, але ми з вами вже змогли допомогти багатьом тваринам знайти свого друга та домівку,
+          врятували від холоду чи голоду, і просто зробили їх життя трохи краще, а світ трохи добрішим. Ми впевнені що це
+          все не дарма і разом ми можемо допомогти ще багатьом.
+        </p>
+
+
+        <a routerLink="/how" class="btn btn-green">Як допомогти</a>
+
+        <ul class="statistics">
+          <li>
+            <p class="figure">100+</p>
+            <p>тварини чекають<br/>на допомогу та домівку</p>
+          </li>
+          <li>
+            <p class="figure">900+</p>
+            <p>пожертв ви зробили<br/>за останній місяць</p>
+          </li>
+        </ul>
+    </div>
+    <div class="pets-list right">
+      <ul>
+        <li *ngFor="let pet of (pets | async)?.pets">
+          <app-pet-card [pet]="pet"></app-pet-card>
+        </li>
+      </ul>
+    </div>
+  </div>
+</section>
